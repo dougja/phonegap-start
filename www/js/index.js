@@ -24,8 +24,9 @@ var app = {
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
         var receivedElement = parentElement.querySelector('.received');
-        pushNotification.register(app.successHandler, app.errorHandler,{"senderID":"776389651418","ecb":"app.onNotificationGCM"});
         var pushNotification = window.plugins.pushNotification;
+        pushNotification.register(app.successHandler, app.errorHandler,{"senderID":"776389651418","ecb":"app.onNotificationGCM"});
+
 
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
