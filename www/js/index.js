@@ -17,7 +17,7 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-		alert('started!');
+		//alert('started!');
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -31,7 +31,7 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
-		alert('received event: '+id);
+		//alert('received event: '+id);
     },
     // result contains any message sent from the plugin call
     successHandler: function(result) {
