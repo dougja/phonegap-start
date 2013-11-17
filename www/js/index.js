@@ -17,7 +17,8 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-		alert('Ready!');
+		pushNotification.register(app.successHandler, app.errorHandler,{"senderID":"yipappid","ecb":"app.onNotificationGCM"});
+
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
