@@ -17,8 +17,6 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-		pushNotification.register(app.successHandler, app.errorHandler,{"senderID":"yipappid","ecb":"app.onNotificationGCM"});
-
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -26,7 +24,7 @@ var app = {
         var listeningElement = parentElement.querySelector('.listening');
         var receivedElement = parentElement.querySelector('.received');
         var pushNotification = window.plugins.pushNotification;
-        pushNotification.register(app.successHandler, app.errorHandler,{"senderID":"yipappid","ecb":"app.onNotificationGCM"});
+        pushNotification.register(app.successHandler, app.errorHandler,{"senderID":"776389651418","ecb":"app.onNotificationGCM"});
 
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
