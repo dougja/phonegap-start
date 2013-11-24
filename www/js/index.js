@@ -1,24 +1,20 @@
 
-var app = {
-    // Application Constructor
+var app =
+{
     initialize: function() {
         this.bindEvents();
     },
-    // Bind Event Listeners
-    //
+	
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
     },
-    // deviceready Event Handler
-    //
-    // The scope of 'this' is the event. In order to call the 'receivedEvent'
-    // function, we must explicity call 'app.receivedEvent(...);'
+
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-		//alert('started!');
     },
+	
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
@@ -27,12 +23,10 @@ var app = {
         var pushNotification = window.plugins.pushNotification;
         pushNotification.register(app.successHandler, app.errorHandler,{"senderID":"776389651418","ecb":"app.onNotificationGCM"});
 
-
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
-		//alert('received event: '+id);
     },
     // result contains any message sent from the plugin call
     successHandler: function(result) {
